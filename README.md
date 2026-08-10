@@ -1,6 +1,5 @@
 # 🎯 AI Career Master: Intelligent Interview Simulator
 
-[![Clink Here for Demo](https://static.streamlit.io/badges/streamlit_badge_svg.svg)](https://ai-interview-prep-platform-cwps9szn55ybmqtga6wden.streamlit.app/)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Groq AI](https://img.shields.io/badge/AI-Groq%20LPU-orange)](https://groq.com/)
 [![Supabase](https://img.shields.io/badge/Database-Supabase-green)](https://supabase.com/)
@@ -52,10 +51,17 @@ Designed the platform with **Standard Math Notation (LaTeX)**. Integrated strict
 ## ⚙️ Installation & Usage
 
 1. **Get an API Key:** Sign up at [Groq Cloud](https://console.groq.com/).
-2. **Environment Setup:** 
-   - Create a `.streamlit/secrets.toml` file.
-   - Add your `GROQ_API_KEY`, `SUPABASE_URL`, and `SUPABASE_KEY`.
-3. **Run the App:**
-   ```bash
-   pip install -r requirements.txt
-   streamlit run app.py
+
+### Option A: Run with Docker (Recommended)
+You don't need to install Python or any dependencies. Just run these two commands:
+```bash
+docker build -t ai-interview-app .
+docker run -p 8501:8501 ai-interview-app
+```
+Then open your browser to `http://localhost:8501` and enter your Groq API key in the sidebar.
+
+### Option B: Run locally with Python
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
